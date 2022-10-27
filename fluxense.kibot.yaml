@@ -1,0 +1,31 @@
+kibot:
+  version: 1
+
+outputs:
+- name: basic_ibom
+  comment: Interactive HTML BoM
+  type: ibom
+  dir: Assembly
+- name: basic_pdf_sch_print
+  comment: Schematic in PDF format
+  type: pdf_sch_print
+  dir: Schematic
+- name: basic_step
+  comment: 3D model in STEP format
+  type: step
+  dir: 3D
+- name: png_top
+  comment: PCB 2D render in PNG format
+  type: pcbdraw
+  dir: PCB/2D_render
+  options:
+    style: jlcpcb-green-enig
+    format: png
+- name: png_bottom
+  comment: PCB 2D render in PNG format, bottom
+  type: pcbdraw
+  dir: PCB/2D_render
+  options:
+    style: jlcpcb-green-enig
+    format: png
+    bottom: true
